@@ -730,7 +730,12 @@
   left: 427px;
   top: 1px;
   cursor: pointer;
+  border: none;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
 }
+
 
 .calendar:hover path {
   fill: var(--basic-black);
