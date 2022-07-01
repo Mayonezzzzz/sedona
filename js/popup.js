@@ -16,11 +16,11 @@ if (modal.classList.contains("modal-show")) {
 };
 
 form.addEventListener ("submit", function(evt) {
-if(!dateEntry.value || !dateDeparture.value){
- evt.preventDefault();
- modal.classList.remove("modal-error");
- modal.offsetWidth = modal.offsetWidth;
- modal.classList.add("modal-error");
+  if(!dateEntry.value || !dateDeparture.value){
+    evt.preventDefault();
+    modal.classList.remove("modal-error");
+    modal.offsetWidth = modal.offsetWidth;
+    modal.classList.add("modal-error");
 }
 });
 

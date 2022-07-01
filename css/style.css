@@ -23,6 +23,7 @@
   --form-gray: #ebebeb;
   --modal-symbol: #a9a9a9;
   --shadow: rgba(0, 1, 1, 0.2);
+  --font-weight-normal: #333333;
 }
 
 /*Fonts*/
@@ -31,28 +32,14 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/PTSans.woff), url(../fonts/PTSans.woff2);
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url(../fonts/PTSans.woff), url(../fonts/PTSans.woff2);
+  src: url(../fonts/PTSans.woff2), url(../fonts/PTSans.woff);
 }
 
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url(../fonts/PTSans-Bold.woff), url(../fonts/PTSans-Bold.woff2);
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url(../fonts/PTSans-Bold.woff), url(../fonts/PTSans-Bold.woff2);
+  src: url(../fonts/PTSans-Bold.woff2), url(../fonts/PTSans-Bold.woff);
 }
 
 /*Global*/
@@ -249,6 +236,7 @@
   margin-top: 10px;
   min-width: 519px;
   max-width: 85%;
+  color: var(--font-weight-normal);
 }
 
 .advantages-header-slogan p:last-child {
@@ -340,7 +328,7 @@
   text-align: center;
   order: 3;
   width: 310px;
-
+  color: var(--font-weight-normal);
 }
 
 .advantages-item:nth-of-type(n+2):nth-of-type(-n+4) p:last-of-type {
@@ -356,6 +344,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+}
+
+.advantages-item:nth-of-type(n+6):nth-of-type(-n+8) p {
+  color: var(--font-weight-normal);
 }
 
 .advantages-item:nth-of-type(n+6):nth-of-type(-n+8) h3 {
@@ -456,6 +448,7 @@
   text-align: center;
   line-height: 24px;
   margin: 10px 0 10px 0;
+  color: var(--font-weight-normal);
 }
 
 .button {
@@ -493,7 +486,7 @@
 /*Map*/
 
 .map {
-  background-image: url(../img/map.png);
+  background-image: url(../img/map.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -508,9 +501,10 @@
 
 .footer {
   background-color: var(--special-white);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  /*justify-content: space-around;
+  align-items: center;*/
   min-height: 120px;
   grid-column: 1/2;
   grid-row: 2/3;
@@ -540,7 +534,8 @@
 
 .footer-social {
   min-width: 150px;
-  transform: translate(18px);
+  margin: 34px auto auto auto;
+  /*transform: translate(18px);*/
 }
 
 .footer-social-list {
@@ -565,7 +560,8 @@
 
 .footer-copyright {
   display: flex;
-  transform: translate(-17px);
+  margin: 43px 132px auto auto;
+  /*transform: translate(-17px);*/
 }
 
 .footer-copyright-link {
@@ -600,7 +596,8 @@
 }
 
 .contacts {
-  transform: translate(38px,-9px);
+  margin: 21px auto auto 151px;
+  /*transform: translate(38px,-9px);*/
 }
 
 /*Modal*/
@@ -912,7 +909,7 @@
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url(../img/checkbox_off.svg);
 }
 
 .filter-input-checkbox:checked+.label-checkbox::after {
@@ -922,7 +919,7 @@
   top: 0;
   width: 26px;
   height: 23px;
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url(../img/checkbox_on.svg);
 }
 
 .filter-input-checkbox:checked+.label-checkbox::before {
@@ -1096,6 +1093,17 @@
 
 .button-up {
   margin-right: 12px;
+  border: none;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+}
+
+.button-down {
+  border: none;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
 }
 
 .button-down:hover path,.button-up:hover path {
@@ -1174,7 +1182,7 @@
 }
 
 .results-item {
-  border-bottom: 2px solid var(--line-catalog);
+  border-bottom: 1px solid var(--line-catalog);
 }
 
 .results-card-container {
@@ -1221,6 +1229,7 @@
   min-width: 106px;
   margin: 0;
   margin-right: 10px;
+  color: var(--font-weight-normal);
   transform: translateY(-4px);
 }
 
