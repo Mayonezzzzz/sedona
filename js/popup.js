@@ -4,14 +4,15 @@ const dateEntry = modal.querySelector("[name=date-of-entry]");
 const form = modal.querySelector(".modal-form");
 const dateDeparture = modal.querySelector("[name=date-of-departure]");
 
+if (modal.classList.contains("modal-show")) {
+  modal.classList.remove("modal-show");
+  modal.classList.add("modal-hidden");
+};
+
 buttonPopup.onclick = function () {
   modal.classList.toggle("modal-show");
   modal.classList.toggle("modal-hidden");
   modal.classList.remove("modal-error");
-  dateEntry.focus();
-};
-
-if (modal.classList.contains("modal-show")) {
   dateEntry.focus();
 };
 
